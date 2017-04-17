@@ -1,0 +1,15 @@
+﻿<Window x:Class="MoHinhTrongSo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoHinhTrongSo"
+        mc:Ignorable="d" Height="350" Width="300" Title="Mô hình trọng số"
+        Closed="MainWindow_OnClosed">
+    <Grid>
+        <Button x:Name="BtnNhap" Content="Nhập số liệu" HorizontalAlignment="Left" Height="52" Margin="54,52,0,0" VerticalAlignment="Top" Width="181" Click="BtnNhap_Click"/>
+        <Button x:Name="BtnNhapExcel" Content="Nhập từ Excel" HorizontalAlignment="Left" Height="52" Margin="54,131,0,0" VerticalAlignment="Top" Width="181" Click="BtnNhapExcel_Click"/>
+        <Button x:Name="BtnXuatExcel" Content="Xuất ra Excel" HorizontalAlignment="Left" Height="52" Margin="54,216,0,0" VerticalAlignment="Top" Width="181" Click="BtnXuatExcel_Click"/>
+
+    </Grid>
+</Window>
