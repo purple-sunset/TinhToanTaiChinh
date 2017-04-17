@@ -16,9 +16,9 @@ namespace TinhToanTaiChinh.Model
         private long _thu;
         private long _chi;
         private long _khoiLuong;
-        private float _pv;
-        private float _fv;
-        private float _pb;
+        private double _pv;
+        private double _fv;
+        private double _pb;
 
         public int Thang
         {
@@ -64,7 +64,7 @@ namespace TinhToanTaiChinh.Model
             }
         }
 
-        public float PV
+        public double PV
         {
             get => _pv;
             set
@@ -75,7 +75,7 @@ namespace TinhToanTaiChinh.Model
             }
         }
 
-        public float FV
+        public double FV
         {
             get => _fv;
             set
@@ -86,7 +86,7 @@ namespace TinhToanTaiChinh.Model
             }
         }
 
-        public float PB
+        public double PB
         {
             get => _pb;
             set

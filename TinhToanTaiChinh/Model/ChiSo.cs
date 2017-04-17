@@ -12,21 +12,21 @@ namespace TinhToanTaiChinh.Model
     class ChiSo:INotifyPropertyChanged
     {
         
-        private float _npv;
-        private float _npvt;
-        private float _npvc;
-        private float _nfv;
-        private float _crf;
-        private float _af;
-        private float _ae;
-        private float _irr;
-        private float _marr;
-        private float _roi;
-        private float _roce;
+        private double _npv;
+        private double _npvt;
+        private double _npvc;
+        private double _nfv;
+        private double _crf;
+        private double _af;
+        private double _ae;
+        private double _irr;
+        private double _marr;
+        private double _roi;
+        private double _roce;
         private string _pb;
 
 
-        public ChiSo(float npv, float nfv, float crf, float af, float ae, float irr, float marr, float roi, float roce, string pb)
+        public ChiSo(double npv, double nfv, double crf, double af, double ae, double irr, double marr, double roi, double roce, string pb)
         {
             _npvc = 0F;
             _npvt = 0F;
@@ -42,7 +42,7 @@ namespace TinhToanTaiChinh.Model
             _pb = pb;
         }
 
-        public float NPV
+        public double NPV
         {
             get => _npv;
             set
@@ -53,7 +53,7 @@ namespace TinhToanTaiChinh.Model
             }
         }
 
-        public float NPVT
+        public double NPVT
         {
             get => _npvt;
             set
@@ -64,7 +64,7 @@ namespace TinhToanTaiChinh.Model
             }
         }
 
-        public float NPVC
+        public double NPVC
         {
             get => _npvc;
             set
@@ -75,7 +75,7 @@ namespace TinhToanTaiChinh.Model
             }
         }
 
-        public float NFV
+        public double NFV
         {
             get => _nfv;
             set
@@ -86,7 +86,7 @@ namespace TinhToanTaiChinh.Model
             }
         }
 
-        public float CRF
+        public double CRF
         {
             get => _crf;
             set
@@ -97,7 +97,7 @@ namespace TinhToanTaiChinh.Model
             }
         }
 
-        public float AF
+        public double AF
         {
             get => _af;
             set
@@ -108,7 +108,7 @@ namespace TinhToanTaiChinh.Model
             }
         }
 
-        public float AE
+        public double AE
         {
             get => _ae;
             set
@@ -119,7 +119,7 @@ namespace TinhToanTaiChinh.Model
             }
         }
 
-        public float IRR
+        public double IRR
         {
             get => _irr;
             set
@@ -130,7 +130,7 @@ namespace TinhToanTaiChinh.Model
             }
         }
 
-        public float MARR
+        public double MARR
         {
             get => _marr;
             set
@@ -141,7 +141,7 @@ namespace TinhToanTaiChinh.Model
             }
         }
 
-        public float ROI
+        public double ROI
         {
             get => _roi;
             set
@@ -152,7 +152,7 @@ namespace TinhToanTaiChinh.Model
             }
         }
 
-        public float ROCE
+        public double ROCE
         {
             get => _roce;
             set

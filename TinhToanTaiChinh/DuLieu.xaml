@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TinhToanTaiChinh"
         
-        Title="DuLieu" Height="550" Width="900">
+        Title="Dữ Liệu" Height="550" Width="900">
     <Grid>
-        <TabControl x:Name="TabControl" HorizontalAlignment="Left" VerticalAlignment="Top" Width="890" Height="519">
+        <TabControl x:Name="TabControl" HorizontalAlignment="Left" VerticalAlignment="Top" Width="890" Height="519" FontSize="14">
             <TabItem Header="Dữ Liệu">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
@@ -17,7 +17,8 @@
                     <Label Content="Lãi Suất" HorizontalAlignment="Left" Height="30" Margin="134,24,0,0" VerticalAlignment="Top" Width="144" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
                     <TextBox x:Name="TxtLai" Text="{Binding Path=Lai}" HorizontalAlignment="Left" Height="30" Margin="86,24,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="292" VerticalContentAlignment="Center" Grid.Column="1"/>
                     <Label Content="%" HorizontalAlignment="Left" Height="30" Margin="396,25,0,0" VerticalAlignment="Top" Width="46" VerticalContentAlignment="Center" Grid.Column="1"/>
-                    <DataGrid x:Name="DataGrid" ItemsSource="{Binding Path=ThongSoTable}" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="318" Margin="7,74,0,0" VerticalAlignment="Top" Width="870" Grid.ColumnSpan="2">
+                    <DataGrid x:Name="DataGrid" ItemsSource="{Binding Path=ThongSoTable}" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="318" Margin="7,74,0,0" VerticalAlignment="Top" Width="870" Grid.ColumnSpan="2"
+                              Grid.Column="0" FontSize="12">
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding Path=Thang}" Header="Tháng" Width="50"></DataGridTextColumn>
                             <DataGridTextColumn Binding="{Binding Path=Thu}" Header="Thu được (USD)" Width="100"></DataGridTextColumn>
@@ -48,14 +49,23 @@
                         <ColumnDefinition Width="21*"/>
                         <ColumnDefinition Width="554*"/>
                     </Grid.ColumnDefinitions>
-                    <ListView x:Name="ListView" HorizontalAlignment="Left" Height="386" Margin="10,10,0,0" VerticalAlignment="Top" Width="864" Grid.ColumnSpan="3">
+                    <ListView x:Name="ListView" ItemsSource="{Binding ChiSoDictionary}" HorizontalAlignment="Left" Height="356" Margin="10,26,0,0" VerticalAlignment="Top" Width="864" Grid.ColumnSpan="3" FontSize="14">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="Height" Value="30" />
+                            </Style>
+                        </ListView.ItemContainerStyle>
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn/>
+                                <GridViewColumn Header="Chỉ số" Width="700"
+                                                DisplayMemberBinding="{Binding Key}" />
+                                <GridViewColumn Header="Giá trị" Width="150"
+                                                DisplayMemberBinding="{Binding Value}" />
+
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <Button x:Name="BtnXuat" Content="Xuất ra Excel" HorizontalAlignment="Left" Height="40" Margin="315.406,423,0,0" VerticalAlignment="Top" Width="156" Grid.Column="2" Click="BtnXuat_Click"/>
+                    <Button x:Name="BtnXuat" Content="Xuất ra Excel" HorizontalAlignment="Left" Height="40" Margin="315.406,423,0,0" VerticalAlignment="Top" Width="156" Grid.Column="2" Click="BtnXuat_Click" FontSize="14"/>
                 </Grid>
             </TabItem>
         </TabControl>
